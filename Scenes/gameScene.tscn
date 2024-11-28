@@ -3,5 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://clrmcyn2v4et7" path="res://Scenes/Player.tscn" id="1_rixfl"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(0, -3)
 
 [node name="PlayerScene" parent="." instance=ExtResource("1_rixfl")]
