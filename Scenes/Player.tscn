@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://clrmcyn2v4et7"]
+[gd_scene load_steps=4 format=3 uid="uid://clrmcyn2v4et7"]
 
 [ext_resource type="Texture2D" uid="uid://cd1xx5xgloqnd" path="res://Assets/peng.png" id="1_6i2uf"]
 [ext_resource type="Script" path="res://PlayerMovement.cs" id="2_evbpp"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqnmw"]
+size = Vector2(508, 572)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PlayerScene" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(50, -15)
-texture = ExtResource("1_6i2uf")
 script = ExtResource("2_evbpp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_6i2uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(22, 37)
+shape = SubResource("RectangleShape2D_pqnmw")
